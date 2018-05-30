@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Words</title>
+</head>
+<body>
+	
+<form action="word" method="post">
+	{% csrf_token %}
+	Add a word<input type="text" name="word">
+	<br>
+	Choose Color:
+	<label for="red">Red</label>
+	<input type="radio" id="red" name="color" value="red">
+	<label for="green">Green</label>
+	<input type="radio" id="green" name="color" value="green">
+	<label for="blue">Blue</label>
+	<input type="radio" id="blue" name="color" value="blue"></p>
+	<input type="checkbox" name="size" value="24px">Big
+	<br>
+	<input type="checkbox" name="size" value="12px">Regular
+	<p><input type="submit" value="Add New Word"></p>
+
+</form>
+<p>Words List</p>
+
+{% for i in request.session.allwords %}
+<p style='color:{{i.color}}; font-size: {{i.size}};'> {{i.word}}, {{i.size}}</p>
+
+{% endfor %}
+</body>
+</html>

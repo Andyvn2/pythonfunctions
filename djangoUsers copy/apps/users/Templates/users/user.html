@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show User</title>
+</head>
+<body>
+<h1>User # {{User.id}} Detail</h1>
+
+Full Name: {{User.first_name}} {{User.last_name}}
+<br>
+Email: {{User.email_address}}
+<br>
+Created At: {{ User.created_at }}
+
+<br>
+<br>
+<br>
+<a href="{{User.id}}/edit"> Edit User </a>
+<br>
+<a href="users/{{users.id}}/destroy"> Delete </a>
+
+</body>
+</html>

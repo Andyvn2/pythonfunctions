@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+</head>
+<body>
+
+<h1>Facebook</h1>
+
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <p style="color: red">{{message}}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+<h2>Login</h2>
+
+  
+
+<form action='/login' method='POST'>
+	<label for="email">Email<input type="text" name="email" id="email" value="andy@uci.edu"></label>
+	<label for="password">Password<input type="text" name="password" id="password" value="123456789"></label>
+    <input type="submit" value="Login">
+</form>
+
+
+<h2>Registration</h2>
+
+	<form action='/register' method='POST' >
+		<label for="first_name">First Name:<input type="text" name="first_name" id="first_name" value="Andrew"> </label>
+		<label for="last_name">last Name:<input type="text" name="last_name" id="last_name" value="Nguyen"> </label>
+		<label for="new_email">Email:<input type="text" name="new_email" id="new_email" value="andy@uci.edu"></label>
+		<label for="new_password">Password:<input type="text" name="new_password" id="new_password" value="123456789"></label>
+		<label for="confirm_password">Confirm Password:<input type="text" name="confirm_password" id="confirm_password" value="123456789"></label>
+    	<input type="submit" value="Register">
+	</form>
+</body>
+</html>

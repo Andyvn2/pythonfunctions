@@ -1,0 +1,18 @@
+<html>
+    <head>
+       <title>Form Test Index</title>
+    </head>
+    <body>
+      <h1>Index Page</h1>
+      <h3>Create a User</h3>
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+      <form action='/survey' method='post'>
+          Name: <input type='text' name='name'>
+          Dojo Location: <select name="Location"><option value="Silicon Valley">Silicon Valley</option></select>
+          Favorite Language: <select name="Favorite Language"><option value="Javascript">Javascript</option></select>
+          <p>A short description about yourself:</p>
+          <p><textarea name="description"></textarea></p>
+          <input type='submit' value='submit'>
+      </form>
+    </body>
+</html>

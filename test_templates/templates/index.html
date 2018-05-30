@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/my_style_sheet.css') }}">
+	<script type="text/javascript" src="{{ url_for('static', filename='my_script.js') }}"></script>
+	<title>My first template</title>
+</head>
+<body>
+<h1>My first flask template with embedded python</h1>
+<p>phrase {{phrase}}</p>
+<p>times: {{ times}}</p>
+<p>phrase {{phrase}}</p>
+<p>times: {{ times}}</p>
+<p>phrase {{phrase}}</p>
+<p>times: {{ times}}</p>
+<p>phrase {{phrase}}</p>
+<p>times: {{ times}}</p>
+
+
+{% for x in range(0,times+2): %}
+     <p>{{ phrase }}</p>     
+      {% endfor %}
+
+
+
+{% if phrase == "hello" %}
+ <p>The phrase says hello</p>
+      {% endif %}
+
+</body>
+</html>

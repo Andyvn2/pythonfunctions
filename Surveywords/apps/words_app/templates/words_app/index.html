@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form</title>
+</head>
+<body>
+<div id="form">
+<form action="/word" method="POST">
+	{% csrf_token %}
+	Add a New word: <input type="text" name="name" >
+
+	<input type="submit" value="submit">
+</form>
+</div>
+
+
+</form>
+</body>
+</html>

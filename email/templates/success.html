@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>success</title>
+</head>
+<body>
+
+<h1>SUCCESS</h1>
+
+<h1>Email address Registered</h1>
+{% for x in email %}
+		<p>Email: {{ x.email }} </p>
+		<p>Created On: {{ x.created_at}}</p>
+		<hr>
+{% endfor %}
+
+</body>
+</html>

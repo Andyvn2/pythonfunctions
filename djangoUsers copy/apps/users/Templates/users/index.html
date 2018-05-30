@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users</title>
+</head>
+<body>
+<h1>Users</h1>
+
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Full Name</th>
+		<th>Email</th>
+		<th>Created At</th>
+		<th>Actions</th>
+	</tr>
+	{% for users in Users %}
+	<tr>
+		<td>{{ users.id }}</td>
+		<td>{{ users.first_name }} {{ users.last_name}}</td>
+		<td>{{ users.email_address }}</td>
+		<td>{{ users.created_at }}</td>
+		<td>
+			<a href="users/{{users.id}}/edit"> Edit </a>
+		 	<a href="users/{{users.id}}/destroy"> Delete </a>
+		 	<a href="users/{{users.id}}"> Show </a>
+		</td>
+	</tr>
+	{% endfor %}
+
+</table>
+
+<a href="users/new"> Add a New User </a>
+
+</body>
+</html>

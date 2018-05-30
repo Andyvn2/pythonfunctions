@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Results</title>
+</head>
+<body>
+<p>Results are In! Thank you for submitting this form</p>
+
+Submitted information:
+<p></p>
+Name:{{ request.session.name }}
+<p></p>
+Dojo Location: {{ request.session.location}}
+<p></p>
+Language: {{ request.session.language }}
+<p></p>
+comment: {{ request.session.comment }}
+</body>
+</html>

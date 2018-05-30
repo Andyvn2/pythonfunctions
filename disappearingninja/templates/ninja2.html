@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>Hello</p>
+
+{% if color == "red" %}
+ 	<p><img src="{{ url_for('static', filename='raphael.jpg') }}"></p>
+{% elif color == "orange" %}
+ 	<p><img src="{{ url_for('static', filename='michelangelo.jpg') }}"></p>
+{% elif color == "purple" %}
+ 	<p><img src="{{ url_for('static', filename='donatello.jpg') }}"></p>
+{% elif color == "blue" %}
+ 	<p><img src="{{ url_for('static', filename='leonardo.jpg') }}"></p>
+{% else %}
+	 <p><img src="{{ url_for('static', filename='notapril.jpg') }}"></p>
+{% endif %}
+
+
+
+
+</body>
+</html>

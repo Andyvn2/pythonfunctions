@@ -1,0 +1,26 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/numbergamecss.css') }}">
+	<script type="text/javascript" src="{{ url_for('static', filename='js/numbergamejs.js') }}"></script>
+	<title>Number Game</title>
+</head>
+<body>
+<h1>Welcome to the Great Number Game</h1>
+<p>I am thinking of a number between 1 and 100</p>
+<p>Winning number is : {{ guessnumber}}</p>
+<p>You Guessed: {{ guess_number }}</p>
+<p>Results: {{ guess }}</p>
+<p></p>
+<p>Take a guess!</p>
+<form method="POST" action="/guess">
+	<input type="hidden" name="guess" value="register">
+	Guess: <input type="text" name="Guess">
+	<input type='submit' value='submit'>
+</form>
+	<p>{{ Answer }}</p>
+</body>
+</html>
